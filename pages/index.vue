@@ -3,18 +3,17 @@
     <!-- <video-animation></video-animation> -->
 
     <div class="index">
-      <h1>Minesweeper index.vue</h1>
+      <h1>Minesweeper</h1>
       <!-- <StartButtonGroup /> -->
 
       <div style="margin-top: 25px">
-        <!-- <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper" /> -->
         <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper"  />
       </div>
     </div>
 
-<!--     <div class="infoicon-container">
+    <div class="infoicon-container">
       <img class="image-info" src="../assets/images/rules.png" @click="navigateToRules()" />
-    </div> -->
+    </div>
 
     <div
       style="
@@ -53,6 +52,10 @@
 import { navigateTo } from '#app'
 
 function navigateToMinesweeper() {
+  navigateTo('/minesweeper')
+}
+
+function navigateToRules() {
   navigateTo('/rules')
 }
 /* import { useStore } from '@/stores/size'
