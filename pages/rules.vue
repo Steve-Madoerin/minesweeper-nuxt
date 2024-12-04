@@ -2,7 +2,7 @@
   <div class="layout">
     <div class="page-container">
       <div class="page flex flex-center">
-        <!-- <VideoAnimationComponent></VideoAnimationComponent> -->
+        <VideoAnimationComponent></VideoAnimationComponent>
         <!-- <video class="video-background" autoplay loop muted>
           <source src="@/assets/video/minesweeper.mp4" type="video/mp4" />
         </video> -->
@@ -35,8 +35,7 @@
             </div>
           </div>
           <div class="container-button">
-            <!-- <button class="return-button" @click="goBack">Continue</button> -->
-            <button class="return-button">Continue</button>
+             <button class="return-button" @click="goBack">Continue</button>
           </div>
           <div class="container">
             <div class="column">
@@ -86,8 +85,16 @@
 </template>
 
 <script setup lang="ts">
-// import VideoAnimationComponent from './VideoAnimationComponent.vue'
+import VideoAnimationComponent from '@/components/VideoAnimationComponent.vue'
 
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goBack = () => {
+  router.back()
+}
 // const goBack = () => {
 //   history.back()
 // }

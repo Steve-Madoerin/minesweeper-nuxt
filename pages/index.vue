@@ -4,17 +4,16 @@
 
     <div class="index">
       <h1>Minesweeper</h1>
-      <!-- <StartButtonGroup /> -->
+      <StartButtonGroup />
 
       <div style="margin-top: 25px">
-        <!-- <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper" /> -->
-        <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper"  />
+        <img class="image" src="@/assets/images/bomb.png" @click="navigateToRules()"  />
       </div>
     </div>
 
-<!--     <div class="infoicon-container">
+    <div class="infoicon-container">
       <img class="image-info" src="../assets/images/rules.png" @click="navigateToRules()" />
-    </div> -->
+    </div>
 
     <div
       style="
@@ -50,26 +49,31 @@
 
 <script setup lang="ts">
 import VideoAnimation from '@/components/VideoAnimationComponent.vue'
+import StartButtonGroup from '@/components/buttonGroupComponents/StartButtonGroup.vue'
 import { navigateTo } from '#app'
-
-function navigateToMinesweeper() {
-  navigateTo('/rules')
-}
-/* import { useStore } from '@/stores/size'
+import { useStore } from '@/stores/size'
 import { statusStore } from '@/stores/status'
 import { useGameFieldStore } from '@/stores/gameField'
 import { flagsStore } from '@/stores/flags'
 import { useRouter } from 'vue-router'
 
-import StartButtonGroup from '@/components/buttonGroupComponents/StartButtonGroup.vue' */
+function navigateToRules() {
+  navigateTo('/rules')
+}
 
-/* const flagStore = flagsStore()
+
+/*
+ const flagStore = flagsStore()
 const storeSize = useStore()
 const gameFieldStore = useGameFieldStore()
-const storeStatus = statusStore() */
-/* const router = useRouter()
+const storeStatus = statusStore()
+ const router = useRouter()
 const isOffline = ref(!navigator.onLine)
 
+
+
+ */
+/*
 onMounted(() => {
   localStorage.setItem('seconds', '0')
   localStorage.setItem('isPaused', JSON.stringify(true))
@@ -78,13 +82,16 @@ onMounted(() => {
   window.addEventListener('offline', updateOfflineStatus)
 })
 
+
+
+
+
 const updateOnlineStatus = () => (isOffline.value = false)
 const updateOfflineStatus = () => (isOffline.value = true)
 
-function navigateToRules() {
-  router.push('/rules')
-} */
-/* async function newGame() {
+
+
+async function newGame() {
   try {
     if (isOffline.value) {
       throw new Error('You are offline')
@@ -104,15 +111,20 @@ function navigateToRules() {
     console.error('There was a problem with the fetch operation:', error)
     throw error
   }
-} */
+}
 
-/* async function navigateToMinesweeper() {
+ async function navigateToMinesweeper() {
   try {
-    //await newGame()
-    router.push('/minesweeper')
+    const game = await newGame()
+    console.log('game: ' + game)
+    //navigateTo('/game')
   } catch (Error) {
-    router.push('/offline')
+    //TODO: navigate to offline page
+    //navigateTo('/offline')
     console.error(Error)
   }
-} */
+}
+
+
+ */
 </script>

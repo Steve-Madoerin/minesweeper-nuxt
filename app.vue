@@ -4,6 +4,7 @@
       <nav>
         <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/rules">Rules</NuxtLink>
+        <NuxtLink to="/game">Game</NuxtLink>
         <!-- <NuxtLink to="/about">About</NuxtLink> -->
       </nav>
     </header>
