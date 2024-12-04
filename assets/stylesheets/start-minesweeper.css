@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Minesweeper';
+  src:
+    url('../fonts/mine-sweeper.ttf') format('truetype'),
+    url('../fonts/mine-sweeper.woff') format('woff'),
+    url('../fonts/mine-sweeper.woff2') format('woff2');
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.index h1 {
+  font-family: 'Minesweeper';
+  font-size: 5vw;
+  color: #e7ebed;
+  margin-top: 0;
+}
+
+@media (max-width: 576px) {
+  .index h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.image {
+  width: 17vw;
+  height: 17vw;
+}
+
+@media (max-width: 576px) {
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.image:hover {
+  opacity: 0.7;
+}
