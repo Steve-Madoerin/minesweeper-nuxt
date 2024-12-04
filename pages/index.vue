@@ -7,7 +7,8 @@
       <!-- <StartButtonGroup /> -->
 
       <div style="margin-top: 25px">
-        <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper" />
+        <!-- <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper" /> -->
+        <img class="image" src="@/assets/images/bomb.png"  />
       </div>
     </div>
 
@@ -61,7 +62,7 @@ import StartButtonGroup from '@/components/buttonGroupComponents/StartButtonGrou
 const storeSize = useStore()
 const gameFieldStore = useGameFieldStore()
 const storeStatus = statusStore() */
-const router = useRouter()
+/* const router = useRouter()
 const isOffline = ref(!navigator.onLine)
 
 onMounted(() => {
@@ -77,7 +78,7 @@ const updateOfflineStatus = () => (isOffline.value = true)
 
 function navigateToRules() {
   router.push('/rules')
-}
+} */
 /* async function newGame() {
   try {
     if (isOffline.value) {
@@ -100,7 +101,7 @@ function navigateToRules() {
   }
 } */
 
-async function navigateToMinesweeper() {
+/* async function navigateToMinesweeper() {
   try {
     //await newGame()
     router.push('/minesweeper')
@@ -108,5 +109,5 @@ async function navigateToMinesweeper() {
     router.push('/offline')
     console.error(Error)
   }
-}
+} */
 </script>
