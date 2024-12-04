@@ -106,6 +106,7 @@ async function newGame() {
     const data = await response.json()
     flagStore.setFlags(data.flagAmount)
     console.log('data repsonse:' + data.value)
+    console.log('data repsonse game:' + data.field)
     gameFieldStore.setGameField(data.field)
     storeStatus.setStatus(data.board)
     console.log(data)
@@ -118,7 +119,9 @@ async function newGame() {
  async function navigateToMinesweeper() {
   try {
     const game = await newGame()
-    //console.log('game: ' + game)
+    const gamesave = gameFieldStore.loadGameField()
+    console.log('gamesaved: ' + gamesave)
+    console.log('game: ' + game)
     //navigateTo('/game')
   } catch (Error) {
     //TODO: navigate to offline page
