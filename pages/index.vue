@@ -8,7 +8,7 @@
 
       <div style="margin-top: 25px">
         <!-- <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper" /> -->
-        <img class="image" src="@/assets/images/bomb.png"  />
+        <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper"  />
       </div>
     </div>
 
@@ -48,8 +48,13 @@
 }
 </style>
 
-<script setup lang="ts">
-import { ref, onMounted } from 'vue'
+<script setup >
+//import { ref, onMounted } from 'vue'
+import { navigateTo } from '#app'
+
+function navigateToMinesweeper() {
+  navigateTo('/rules')
+}
 /* import { useStore } from '@/stores/size'
 import { statusStore } from '@/stores/status'
 import { useGameFieldStore } from '@/stores/gameField'

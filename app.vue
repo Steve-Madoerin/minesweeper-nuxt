@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id ="app">
     <header>
       <nav>
         <NuxtLink to="/">Home</NuxtLink>
