@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <video-animation></video-animation> -->
+    <VideoAnimation />
 
     <div class="index">
       <h1>Minesweeper</h1>
@@ -49,13 +49,14 @@
 </style>
 
 <script setup lang="ts">
+import VideoAnimation from '@/components/VideoAnimationComponent.vue'
 import { ref, onMounted } from 'vue'
 /* import { useStore } from '@/stores/size'
 import { statusStore } from '@/stores/status'
 import { useGameFieldStore } from '@/stores/gameField'
 import { flagsStore } from '@/stores/flags'
 import { useRouter } from 'vue-router'
-import VideoAnimation from './VideoAnimationComponent.vue'
+
 import StartButtonGroup from '@/components/buttonGroupComponents/StartButtonGroup.vue' */
 
 /* const flagStore = flagsStore()
