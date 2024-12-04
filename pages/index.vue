@@ -3,7 +3,7 @@
     <!-- <video-animation></video-animation> -->
 
     <div class="index">
-      <h1>Minesweeper</h1>
+      <h1>Minesweeper index.vue</h1>
       <!-- <StartButtonGroup /> -->
 
       <div style="margin-top: 25px">
