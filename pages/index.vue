@@ -7,7 +7,7 @@
       <StartButtonGroup />
 
       <div style="margin-top: 25px">
-        <img class="image" src="@/assets/images/bomb.png" @click="navigateToRules()"  />
+        <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper()"  />
       </div>
     </div>
 
@@ -62,40 +62,42 @@ function navigateToRules() {
 }
 
 
-/*
- const flagStore = flagsStore()
+
+const flagStore = flagsStore()
 const storeSize = useStore()
 const gameFieldStore = useGameFieldStore()
 const storeStatus = statusStore()
- const router = useRouter()
-const isOffline = ref(!navigator.onLine)
+const router = useRouter()
+//const isOffline = ref(!navigator.onLine)
 
 
 
- */
-/*
+
+
 onMounted(() => {
   localStorage.setItem('seconds', '0')
   localStorage.setItem('isPaused', JSON.stringify(true))
 
-  window.addEventListener('online', updateOnlineStatus)
-  window.addEventListener('offline', updateOfflineStatus)
+  //window.addEventListener('online', updateOnlineStatus)
+  //window.addEventListener('offline', updateOfflineStatus)
 })
 
 
 
 
 
-const updateOnlineStatus = () => (isOffline.value = false)
-const updateOfflineStatus = () => (isOffline.value = true)
+//const updateOnlineStatus = () => (isOffline.value = false)
+//const updateOfflineStatus = () => (isOffline.value = true)
 
 
 
 async function newGame() {
   try {
+    /*
     if (isOffline.value) {
       throw new Error('You are offline')
     }
+    */
     console.log('new game start minesweeper: ' + storeSize.size)
     const response = await fetch(`http://serene-peak-10116-79a087b3a95c.herokuapp.com/lgrid/${storeSize.size}`)
     if (!response.ok) {
@@ -116,7 +118,7 @@ async function newGame() {
  async function navigateToMinesweeper() {
   try {
     const game = await newGame()
-    console.log('game: ' + game)
+    //console.log('game: ' + game)
     //navigateTo('/game')
   } catch (Error) {
     //TODO: navigate to offline page
@@ -126,5 +128,5 @@ async function newGame() {
 }
 
 
- */
+
 </script>
