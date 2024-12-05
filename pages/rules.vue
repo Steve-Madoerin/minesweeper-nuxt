@@ -93,7 +93,7 @@ import VideoAnimationComponent from '~/components/videoAnimationComponent/VideoA
 //const router = useRouter()
 
 const goBack = () => {
-  navigateTo('/game')
+  history.back()
   //router.back()
 }
 // const goBack = () => {
