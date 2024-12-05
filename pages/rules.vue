@@ -88,9 +88,9 @@
 import VideoAnimationComponent from '~/components/videoAnimationComponent/VideoAnimationComponent.vue'
 
 
-import { useRouter } from 'vue-router'
+//import { useRouter } from 'vue-router'
 
-const router = useRouter()
+//const router = useRouter()
 
 const goBack = () => {
   navigateTo('/game')

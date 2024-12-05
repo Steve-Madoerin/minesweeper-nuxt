@@ -65,7 +65,7 @@ const flagStore = flagsStore()
 const storeSize = useStore()
 const gameFieldStore = useGameFieldStore()
 const storeStatus = statusStore()
-const router = useRouter()
+//const router = useRouter()
 const isOffline = ref(true)
 
 onMounted(() => {

@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="menu-items link-group">
       <ul class="horizontal-menu">
-        <li><a href="#" @click="navigateTo('/')" class="nav-link">New</a></li>
+        <li><a @click="navigateTo('/')" class="nav-link">New</a></li>
         <li><a href="#" @click="informServer('l')" class="nav-link">Load</a></li>
         <li><a href="#" @click="informServer('s')" class="nav-link">Save</a></li>
         <li><a @click="navigateTo('/rules')" class="nav-link">Rules</a></li>
@@ -16,11 +16,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 
-const router = useRouter()
-
-function navigateTo(path: string) {
-  router.push(path)
-}
+//const router = useRouter()
 
 const emit = defineEmits(['startNewGame', 'informServer', 'cheat'])
 const informServer = (command: string) => emit('informServer', command)
