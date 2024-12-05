@@ -19,5 +19,8 @@
     "pinia": "^2.3.0",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
