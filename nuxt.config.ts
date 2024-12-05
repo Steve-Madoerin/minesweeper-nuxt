@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  //ssr: true,
+  ssr: true,
   modules: ['@vite-pwa/nuxt', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
   imports: {
     dirs: ['stores'],
