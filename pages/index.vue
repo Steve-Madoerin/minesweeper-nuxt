@@ -106,10 +106,7 @@ async function newGame() {
 
  async function navigateToMinesweeper() {
   try {
-    const game = await newGame()
-    const gamesave = gameFieldStore.loadGameField()
-    console.log('gamesaved: ' + gamesave)
-    console.log('game: ' + game)
+    await newGame()
     navigateTo('/game')
   } catch (Error) {
     navigateTo('/offline')
