@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   //ssr: true,
   modules: ['@vite-pwa/nuxt', '@pinia/nuxt'],
+  css: ['bootstrap-icons/font/bootstrap-icons.css'],
   pwa: {  
     manifest: {
       name: 'minesweeper-nuxt',

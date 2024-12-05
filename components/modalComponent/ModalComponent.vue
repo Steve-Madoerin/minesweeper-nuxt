@@ -51,10 +51,10 @@ const closeModal = () => {
 .modal .close-btn {
   position: absolute;
   justify-content: center;
+  border: none;
   top: 20px;
   right: 50px;
-  background: none;
-  border: none;
+  background: none;;
   font-size: 30px;
   cursor: pointer;
 }
