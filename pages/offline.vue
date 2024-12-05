@@ -2,7 +2,7 @@
     <div v-if="isOffline" class="dialog-overlay">
       <div class="dialog">
         <div class="dialog-body">
-          <LoadingComponent></LoadingComponent>
+          <LoadingAnimation/>
           <div class="dialog-body-text">
             <p>You are currently offline.</p>
             <p>Please check your internet connection.</p>
@@ -16,10 +16,11 @@
   </template>
   
   <script setup lang="ts">
-  import LoadingComponent from '~/components/loadingComponent/LoadingAnimation.vue'
-  import { useRouter } from 'vue-router'
+  import LoadingAnimation from '~/components/loadingComponent/LoadingAnimation.vue';
   
-  const router = useRouter()
+  //import { useRouter } from 'vue-router'
+  
+  //const router = useRouter()
   
   defineProps({
     isOffline: {
@@ -29,7 +30,7 @@
   })
   
   const refreshPage = () => {
-    router.push('/')
+    navigateTo('/')
   }
   </script>
   

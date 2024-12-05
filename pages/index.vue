@@ -61,43 +61,31 @@ function navigateToRules() {
   navigateTo('/rules')
 }
 
-
-
 const flagStore = flagsStore()
 const storeSize = useStore()
 const gameFieldStore = useGameFieldStore()
 const storeStatus = statusStore()
 const router = useRouter()
-//const isOffline = ref(!navigator.onLine)
-
-
-
-
+const isOffline = ref(true)
 
 onMounted(() => {
+  isOffline.value = !navigator.onLine;
+
   localStorage.setItem('seconds', '0')
   localStorage.setItem('isPaused', JSON.stringify(true))
 
-  //window.addEventListener('online', updateOnlineStatus)
-  //window.addEventListener('offline', updateOfflineStatus)
+  window.addEventListener('online', updateOnlineStatus)
+  window.addEventListener('offline', updateOfflineStatus)
 })
 
-
-
-
-
-//const updateOnlineStatus = () => (isOffline.value = false)
-//const updateOfflineStatus = () => (isOffline.value = true)
-
-
+const updateOnlineStatus = () => (isOffline.value = false)
+const updateOfflineStatus = () => (isOffline.value = true)
 
 async function newGame() {
   try {
-    /*
     if (isOffline.value) {
       throw new Error('You are offline')
     }
-    */
     console.log('new game start minesweeper: ' + storeSize.size)
     const response = await fetch(`http://serene-peak-10116-79a087b3a95c.herokuapp.com/lgrid/${storeSize.size}`)
     if (!response.ok) {
@@ -124,8 +112,7 @@ async function newGame() {
     console.log('game: ' + game)
     navigateTo('/game')
   } catch (Error) {
-    //TODO: navigate to offline page
-    //navigateTo('/offline')
+    navigateTo('/offline')
     console.error(Error)
   }
 }

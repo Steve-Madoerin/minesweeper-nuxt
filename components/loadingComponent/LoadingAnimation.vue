@@ -6,9 +6,9 @@
     </div>
 </template>
   
-  <script setup lang="ts"></script>
+<script setup lang="ts"></script>
   
-  <style scoped>
+<style scoped>
   .minesweeper-loader {
     position: relative;
     width: 150px;
@@ -23,7 +23,7 @@
     width: 30px;
     height: 30px;
     background-size: contain;
-    background-image: url('../assets/images/bomb.png');
+    background-image: url('~/assets/images/bomb.png');
     position: absolute;
     animation: circle 2s infinite linear;
   }
