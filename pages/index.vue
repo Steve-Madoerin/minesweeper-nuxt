@@ -122,7 +122,7 @@ async function newGame() {
     const gamesave = gameFieldStore.loadGameField()
     console.log('gamesaved: ' + gamesave)
     console.log('game: ' + game)
-    //navigateTo('/game')
+    navigateTo('/game')
   } catch (Error) {
     //TODO: navigate to offline page
     //navigateTo('/offline')

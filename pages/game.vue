@@ -1,11 +1,7 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-
+    <h1>Minesweeper</h1>
 </template>
 
-<style scoped>
+<script setup lang="ts"></script>
 
-</style>
+<style scoped></style>
