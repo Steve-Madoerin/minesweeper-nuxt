@@ -24,11 +24,13 @@
 import { useGameFieldStore } from '@/stores/gameField'
 
 const gameFieldStore = useGameFieldStore()
+
 const emit = defineEmits(['click', 'contextmenu'])
 
 const props = defineProps<{
   isFlagMode: boolean
 }>()
+
 
 function getCellClass(cellValue: string) {
   switch (cellValue) {

@@ -83,7 +83,7 @@
   
   async function undoField() {
     console.log('undoField')
-    const response = await fetch('http://serene-peak-10116-79a087b3a95c.herokuapp.com/undo')
+    const response = await fetch('https://serene-peak-10116-79a087b3a95c.herokuapp.com/undo')
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }
@@ -95,7 +95,7 @@
   
   async function redoField() {
     console.log('redoField')
-    const response = await fetch('http://serene-peak-10116-79a087b3a95c.herokuapp.com/redo')
+    const response = await fetch('https://serene-peak-10116-79a087b3a95c.herokuapp.com/redo')
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }
@@ -108,7 +108,7 @@
   async function cheat() {
     isModalVisible.value = true
     console.log('cheat')
-    const response = await fetch('http://serene-peak-10116-79a087b3a95c.herokuapp.com/cheat')
+    const response = await fetch('https://serene-peak-10116-79a087b3a95c.herokuapp.com/cheat')
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }
@@ -125,7 +125,7 @@
         if (command.startsWith('f') && flags.value === 0) {
           return
         }
-        const response = await fetch(`http://serene-peak-10116-79a087b3a95c.herokuapp.com/infoJson/${command}`, {
+        const response = await fetch(`https://serene-peak-10116-79a087b3a95c.herokuapp.com/infoJson/${command}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -164,7 +164,7 @@
       if (timerInterval) {
         stopTimer()
       }
-      const response = await fetch(`http://serene-peak-10116-79a087b3a95c.herokuapp.com/lgrid/${gameSize}`)
+      const response = await fetch(`https://serene-peak-10116-79a087b3a95c.herokuapp.com/lgrid/${gameSize}`)
       if (!response.ok) {
         throw new Error('Network response was not ok')
       }
@@ -182,7 +182,7 @@
   
   async function calculateScore(time: number) {
     try {
-      const response = await fetch(`http://serene-peak-10116-79a087b3a95c.herokuapp.com/score/${time}`)
+      const response = await fetch(`https://serene-peak-10116-79a087b3a95c.herokuapp.com/score/${time}`)
       if (!response.ok) {
         throw new Error('Network response was not ok')
       }

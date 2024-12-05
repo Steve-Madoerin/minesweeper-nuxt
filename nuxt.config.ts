@@ -17,8 +17,14 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-  modules: ['@vite-pwa/nuxt', '@pinia/nuxt'],
-
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+  ssr: true,
+  modules: ['@vite-pwa/nuxt', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
+  imports: {
+    dirs: ['stores'],
+  },
+  css: ['bootstrap-icons/font/bootstrap-icons.css'],
   pwa: {  
     registerType: 'autoUpdate',
     includeManifestIcons: true,

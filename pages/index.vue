@@ -87,7 +87,7 @@ async function newGame() {
       throw new Error('You are offline')
     }
     console.log('new game start minesweeper: ' + storeSize.size)
-    const response = await fetch(`http://serene-peak-10116-79a087b3a95c.herokuapp.com/lgrid/${storeSize.size}`)
+    const response = await fetch(`https://serene-peak-10116-79a087b3a95c.herokuapp.com/lgrid/${storeSize.size}`)
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }
