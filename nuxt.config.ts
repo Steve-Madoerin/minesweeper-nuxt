@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: ['@vite-pwa/nuxt', '@pinia/nuxt'],
   pwa: {  
     manifest: {
-      name: 'minesweeper-vue',
+      name: 'minesweeper-nuxt',
       short_name: 'Minesweeper',
       start_url: '/',
       background_color: '#ffffff',
