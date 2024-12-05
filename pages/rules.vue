@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import VideoAnimationComponent from '@/components/VideoAnimationComponent.vue'
+import VideoAnimationComponent from '~/components/videoAnimationComponent/VideoAnimationComponent.vue'
 
 
 import { useRouter } from 'vue-router'

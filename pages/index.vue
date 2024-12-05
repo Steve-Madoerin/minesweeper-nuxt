@@ -48,7 +48,7 @@
 </style>
 
 <script setup lang="ts">
-import VideoAnimation from '@/components/VideoAnimationComponent.vue'
+import VideoAnimation from '~/components/videoAnimationComponent/VideoAnimationComponent.vue'
 import StartButtonGroup from '@/components/buttonGroupComponents/StartButtonGroup.vue'
 import { navigateTo } from '#app'
 import { useStore } from '@/stores/size'
