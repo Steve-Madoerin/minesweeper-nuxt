@@ -18,8 +18,12 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   devtools: { enabled: true },
-  ssr: true,
-  modules: ['@vite-pwa/nuxt', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
+  ssr: false,
+  modules: [
+    '@vite-pwa/nuxt',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+  ],
   imports: {
     dirs: ['stores'],
   },
