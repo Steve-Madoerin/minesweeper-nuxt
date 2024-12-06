@@ -8,6 +8,7 @@
 
       <div style="margin-top: 25px">
         <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper()"  />
+        <button @click="handleSignOut" class="google-button">Sign Out</button>
       </div>
     </div>
 
@@ -56,6 +57,14 @@ import { statusStore } from '@/stores/status'
 import { useGameFieldStore } from '@/stores/gameField'
 import { flagsStore } from '@/stores/flags'
 import { useRouter } from 'vue-router'
+import { signOut } from 'firebase/auth'
+
+const auth = useFirebaseAuth()
+
+function handleSignOut() {
+  signOut(auth!)
+  
+}
 
 function navigateToRules() {
   navigateTo('/rules')
