@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware(async(to, from) => {
         return navigateTo('/')
     }
 
-    if(!user && to.name !== 'login' && to.name !== 'register') {
+    if(!user && to.name !== 'login' && to.name !== 'register' && to.name !== 'restore') {
         return navigateTo('/login')
     }
 
