@@ -1,19 +1,13 @@
 <!-- pages/login.vue -->
 
 <template>
-    <div class="login-container">
-      <h1>Login</h1>
-      <!-- <form @submit.prevent="login"> -->
-        <!-- <input type="email" v-model="email" placeholder="Email" required />
-        <input type="password" v-model="password" placeholder="Password" required /> -->
-        <!-- <button type="submit">Log in to continue</button> -->
-      <!-- </form> -->
-      <button class="google-button">Log in to continue</button>
-      <button @click="signInWithGoogle" class="google-button">Sign in with Google</button>
-      <p>Don't have an account? <router-link to="/register">Sign up</router-link></p>
-      <!-- <p v-if="errorMessage" class="error">{{ errorMessage }}</p> -->
-    </div>
-  </template>
+  <div class="login-container">
+    <h1>Login</h1>
+    <p>Log in to continue</p>
+    <button @click="signInWithGoogle" class="google-button">Sign in with Google</button>
+    <!-- <p>Don't have an account? <router-link to="/register">Sign up</router-link></p> -->
+  </div>
+</template>
   
   <script setup lang="ts" >
 
