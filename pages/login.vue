@@ -10,7 +10,7 @@
       <input type="password" v-model="password" placeholder="Password" />
       <button type="submit">Log in</button>
     </form>
-    <!-- <p>Don't have an account? <router-link to="/register">Sign up</router-link></p> -->
+    <p>Don't have an account? <router-link to="/register">Sign up</router-link></p>
   </div>
 </template>
   
