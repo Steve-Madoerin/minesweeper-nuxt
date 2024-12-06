@@ -18,9 +18,13 @@
 
   import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
   const auth = useFirebaseAuth()
+  const router = useRouter()
 
   function signInWithGoogle() {
     signInWithPopup(auth!, new GoogleAuthProvider())
+    .then(() => {
+        router.replace('/')
+    })
 }
   </script>
   
