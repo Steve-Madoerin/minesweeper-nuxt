@@ -11,15 +11,20 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@firebase/app-types": "^0.9.3",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@pinia/nuxt": "^0.5.0",
     "@vite-pwa/nuxt": "^0.10.6",
     "bootstrap-icons": "^1.11.3",
-    "firebase": "^11.0.2",
+    "firebase": "^10.14.1",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^5.1.1",
     "nuxt": "^3.14.1592",
+    "nuxt-vuefire": "^1.0.4",
     "pinia": "^2.3.0",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vuefire": "^3.2.0"
   },
   "engines": {
     "node": ">=18.0.0"

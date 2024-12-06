@@ -18,12 +18,27 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   devtools: { enabled: true },
-  ssr: false,
+  ssr: true,
   modules: [
     '@vite-pwa/nuxt',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
+    'nuxt-vuefire',
   ],
+  vuefire: {
+    auth: {
+      enabled: true,
+      sessionCookie: false,
+    },
+    config: {
+      apiKey: "AIzaSyDfE5mnEwDbsPLhJEMk-ymvndD8yNpJ6L4",
+      authDomain: "minesweeper-firebase-cbd5b.firebaseapp.com",
+      projectId: "minesweeper-firebase-cbd5b",
+      storageBucket: "minesweeper-firebase-cbd5b.firebasestorage.app",
+      messagingSenderId: "709061175495",
+      appId: "1:709061175495:web:694d6bff4d9274f02bb6e2"
+    },
+  },
   imports: {
     dirs: ['stores'],
   },
