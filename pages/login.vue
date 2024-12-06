@@ -5,13 +5,22 @@
     <h1>Login</h1>
     <p>Log in to continue</p>
     <button @click="signInWithGoogle" class="google-button">Sign in with Google</button>
+    <form @submit.prevent="signInMailAndPassword(email, password)">
+      <input type="email" v-model="email" placeholder="Email" />
+      <input type="password" v-model="password" placeholder="Password" />
+      <button type="submit">Log in</button>
+    </form>
     <!-- <p>Don't have an account? <router-link to="/register">Sign up</router-link></p> -->
   </div>
 </template>
   
-  <script setup lang="ts" >
+<script setup lang="ts" >
+  import { ref } from 'vue'
 
-  import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+  const email = ref('')
+  const password = ref('')
+
+  import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth'
   const auth = useFirebaseAuth()
   const router = useRouter()
 
@@ -20,10 +29,17 @@
     .then(() => {
         router.replace('/')
     })
-}
-  </script>
+  }
+
+  function signInMailAndPassword(email: string, password: string) {
+    signInWithEmailAndPassword(auth!, email, password)
+    .then(() => {
+        router.replace('/')
+    })
+  }
+</script>
   
-  <style scoped>
+<style scoped>
   .login-container {
     max-width: 400px;
     margin: 0 auto;
@@ -69,4 +85,4 @@
     color: red;
     margin-top: 1rem;
   }
-  </style>
+</style>
