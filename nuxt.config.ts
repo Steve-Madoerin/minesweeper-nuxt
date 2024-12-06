@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   devtools: { enabled: true },
-  ssr: true,
+  ssr: false,
   modules: [
     '@vite-pwa/nuxt',
     '@pinia/nuxt',
