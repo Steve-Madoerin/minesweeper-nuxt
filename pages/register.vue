@@ -1,30 +1,33 @@
 <template>
-    <div class="container">
-      <div class="row justify-center align-center">
-        <div class="col signup d-flex justify-center align-center">
-          <div class="card">
-            <h2 class="card-title">Sign Up</h2>
-            <div class="card-text">
-              <form @submit.prevent="signup">
-                <div class="input-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" v-model="email" required />
-                </div>
-                <div class="input-group">
-                  <label for="password">Password</label>
-                  <input type="password" id="password" v-model="password" required />
-                </div>
-                <button type="submit" class="btn btn-blue">Sign Up</button>
-              </form>
-              <p class="mt-4">
-                Already have an account?
-                <router-link to="/login">Login here</router-link>
-              </p>
+    <div class="background-container" style="background-color: aliceblue;">
+      <div class="container">
+        <div class="row justify-center align-center">
+          <div class="col signup d-flex justify-center align-center">
+            <div class="card">
+              <h2 class="card-title">Sign Up</h2>
+                <div class="card-text">
+                <form @submit.prevent="signup">
+                    <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" v-model="email" required />
+                    </div>
+                    <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" v-model="password" required />
+                    </div>
+                    <button type="submit" class="btn btn-blue">Sign Up</button>
+                </form>
+                <p class="mt-4">
+                    Already have an account?
+                    <router-link to="/login">Login here</router-link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </template>
 
 <script setup lang="ts">
@@ -118,7 +121,7 @@ input {
 }
 
 .btn:hover {
-  background-color: #357ae8;
+  background-color: #c23321;
 }
 
 .mt-4 {
