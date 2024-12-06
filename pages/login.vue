@@ -10,6 +10,7 @@
       <!-- </form> -->
       <button class="google-button">Log in to continue</button>
       <button @click="signInWithGoogle" class="google-button">Sign in with Google</button>
+      <p>Don't have an account? <router-link to="/register">Sign up</router-link></p>
       <!-- <p v-if="errorMessage" class="error">{{ errorMessage }}</p> -->
     </div>
   </template>

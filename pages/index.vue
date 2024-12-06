@@ -2,13 +2,20 @@
   <div>
     <VideoAnimation />
 
+    <div class="top-left-corner">
+      <div class="user-info-container">
+        <img class="image-info" src="@/assets/images/logout.png" @click="handleSignOut" />
+        <!-- <button @click="handleSignOut" class="google-button">Sign Out</button> -->
+        <p class="user-name">{{ !user ? 'Not signed in' : user.displayName }}</p>
+      </div>
+    </div>
+
     <div class="index">
       <h1>Minesweeper</h1>
       <StartButtonGroup />
 
       <div style="margin-top: 25px">
-        <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper()"  />
-        <button @click="handleSignOut" class="google-button">Sign Out</button>
+        <img class="image" src="@/assets/images/bomb.png" @click="navigateToMinesweeper()" />
       </div>
     </div>
 
@@ -40,6 +47,16 @@
   height: 50px;
 }
 
+.user-info-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-left: 10px; /* Adjust spacing as needed */
+  color: white;
+}
+
 .infoicon-container {
   position: absolute;
   top: 10px;
@@ -60,6 +77,7 @@ import { useRouter } from 'vue-router'
 import { signOut } from 'firebase/auth'
 
 const auth = useFirebaseAuth()
+const user = useCurrentUser()
 
 function handleSignOut() {
   signOut(auth!)
