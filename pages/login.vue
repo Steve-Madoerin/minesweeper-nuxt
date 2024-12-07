@@ -6,10 +6,16 @@
           <div class="card">
             <h2 class="card-title">Login</h2>
             <div class="card-text">
-              <button @click="signInWithGoogle" class="btn google-button">Sign in with Google</button>
-              <button @click="showEmailPopup" class="btn google-button">Sign in with Email</button>
-              <button @click="signInWithGitHub" class="btn github-button">Sign in with GitHub</button>
-              <p class="mt-4">
+              <button @click="signInWithGoogle" class="btn google-button">
+                <img src="assets/images/google.png" alt="Google Icon" class="icon-google" /> Sign in with Google
+              </button>
+              <button @click="showEmailPopup" class="btn email-button">
+                <img src="assets/images/mail.png" alt="Mail Icon" class="icon-mail" />Sign in with Email
+              </button>
+              <button @click="signInWithGitHub" class="btn github-button">
+                <img src="assets/images/github.png" alt="GitHub Icon" class="icon-github" /> Sign in with GitHub
+              </button>
+              <p class="mt-4" style="font-size: small; text-align: center" >
                 Don't have an account?
                 <router-link to="/register">Sign up</router-link>
               </p>
@@ -169,7 +175,7 @@ async function sendPwResetEmail(email: string) {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 60%;
 }
 
 .card-title {
@@ -223,6 +229,22 @@ input {
   background-color: #c23321;
 }
 
+.github-button {
+  background-color: #333;
+}
+
+.github-button:hover {
+  background-color: #24292e;
+}
+
+.email-button {
+  background-color: #f3b600;
+}
+
+.email-button:hover {
+  background-color: #e0a800;
+}
+
 .mt-4 {
   margin-top: 16px;
 }
@@ -270,5 +292,24 @@ input {
 
 .btn-link:hover {
   color: #357ae8;
+}
+
+.icon-github {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.icon-google {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.icon-mail {
+  width: 20px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 </style>
