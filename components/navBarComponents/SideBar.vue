@@ -14,12 +14,16 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRouter } from '#app'
 
-//const router = useRouter()
+const router = useRouter()
 
 const emit = defineEmits(['startNewGame', 'informServer', 'cheat'])
 const informServer = (command: string) => emit('informServer', command)
+
+const navigateTo = (path: string) => {
+  router.push(path)
+}
 </script>
 
 <style scoped>
