@@ -61,6 +61,10 @@ function getCellClass(cellValue: string) {
 
 function handleCellClick(cellValue: string, rowIndex: number, colIndex: number) {
   let move
+  if (cellValue !== '~' && cellValue !== 'F') {
+    return
+  }
+
   if (props.isFlagMode) {
     if (cellValue === 'F') {
       move = `u${colIndex <= 9 ? `0${colIndex}` : colIndex}${rowIndex <= 9 ? `0${rowIndex}` : rowIndex}`
@@ -74,10 +78,12 @@ function handleCellClick(cellValue: string, rowIndex: number, colIndex: number) 
     move = `o${colIndex <= 9 ? `0${colIndex}` : colIndex}${rowIndex <= 9 ? `0${rowIndex}` : rowIndex}`
   }
   emit('click', move)
-  // return move
 }
 
 function handleContextMenu(cellValue: string, rowIndex: number, colIndex: number) {
+  if (cellValue !== '~' && cellValue !== 'F') {
+    return
+  }
   const prefix = cellValue === 'F' ? 'u' : 'f'
   const move = `${prefix}${colIndex <= 9 ? `0${colIndex}` : colIndex}${rowIndex <= 9 ? `0${rowIndex}` : rowIndex}`
   return move
