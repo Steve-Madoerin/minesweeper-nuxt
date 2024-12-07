@@ -19,10 +19,6 @@
                 Don't have an account?
                 <router-link to="/register">Sign up</router-link>
               </p>
-<!--               <p class="mt-4">
-                Forgot your password?
-                <button @click="showForgotPasswordPopup" class="btn-link">Reset here</button>
-              </p> -->
             </div>
           </div>
         </div>
@@ -54,6 +50,13 @@
     <div v-if="showForgotPassword" class="popup">
       <div class="popup-content login-container">
         <h3 class="card-title">Reset Password</h3>
+        <h4></h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <form @submit.prevent="sendPwResetEmail(resetEmail)">
           <div class="input-group">
             <label for="reset-email">Email</label>
@@ -259,6 +262,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .popup-content {
@@ -266,8 +270,8 @@ input {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  width: 60%;
+  max-width: 260px;
   text-align: center;
 }
 
