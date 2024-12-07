@@ -1,7 +1,6 @@
 <template>
   <div>
     <VideoAnimation />
-
     <div class="top-left-corner">
       <div class="user-info-container">
         <img class="image-info" src="@/assets/images/logout.png" @click="handleSignOut" />

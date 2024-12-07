@@ -1,5 +1,6 @@
 <template>
-    <div class="background-container" style="background-color: aliceblue;">
+    <div class="background-container">
+      <VideoAnimationComponent />
       <div class="container">
         <div class="row justify-center align-center">
           <div class="col signup d-flex justify-center align-center">
@@ -31,6 +32,7 @@
   </template>
 
 <script setup lang="ts">
+import VideoAnimationComponent from "~/components/videoAnimationComponent/VideoAnimationComponent.vue";
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { createUserWithEmailAndPassword } from 'firebase/auth';

@@ -4,22 +4,25 @@
     <div class="container">
       <div class="row justify-center align-center">
         <div class="col login d-flex justify-center align-center">
-          <div class="card">
-            <h2 class="card-title">Login</h2>
-            <div class="card-text">
-              <button @click="signInWithGoogle" class="btn google-button">
-                <img src="assets/images/google.png" alt="Google Icon" class="icon-google" /> Sign in with Google
-              </button>
-              <button @click="showEmailPopup" class="btn email-button">
-                <img src="assets/images/mail.png" alt="Mail Icon" class="icon-mail" />Sign in with Email
-              </button>
-              <button @click="signInWithGitHub" class="btn github-button">
-                <img src="assets/images/github.png" alt="GitHub Icon" class="icon-github" /> Sign in with GitHub
-              </button>
-              <p class="mt-4" style="font-size: small; text-align: center" >
-                Don't have an account?
-                <router-link to="/register">Sign up</router-link>
-              </p>
+          <div class="container1">
+            <h1>Minesweeper</h1>
+            <div class="card">
+              <h2 class="card-title">Login</h2>
+              <div class="card-text">
+                <button @click="signInWithGoogle" class="btn google-button">
+                  <img src="assets/images/google.png" alt="Google Icon" class="icon-google" /> Sign in with Google
+                </button>
+                <button @click="showEmailPopup" class="btn email-button">
+                  <img src="assets/images/mail.png" alt="Mail Icon" class="icon-mail" />Sign in with Email
+                </button>
+                <button @click="signInWithGitHub" class="btn github-button">
+                  <img src="assets/images/github.png" alt="GitHub Icon" class="icon-github" /> Sign in with GitHub
+                </button>
+                <p class="mt-4" style="font-size: small; text-align: center" >
+                  Don't have an account?
+                  <router-link to="/register">Sign up</router-link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -67,6 +70,18 @@
           <button type="button" class="btn btn-secondary" @click="hideForgotPasswordPopup">Cancel</button>
         </form>
       </div>
+    </div>
+    <div
+        style="
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin-bottom: 10px;
+      "
+    >
+      <p>&copy; 2024 by Steve Madoerin &amp; Dennis Hoang</p>
     </div>
   </div>
 </template>
@@ -147,13 +162,37 @@ async function sendPwResetEmail(email: string) {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 'Minesweeper';
+  src:
+      url('../assets/fonts/mine-sweeper.ttf') format('truetype'),
+      url('../assets/fonts/mine-sweeper.woff') format('woff'),
+      url('../assets/fonts/mine-sweeper.woff2') format('woff2');
+}
 .background-container {
   background-color: transparent;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
+h1 {
+  font-family: 'Minesweeper';
+  font-size: 4.5vw;
+  color: #e7ebed;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 574px) {
+  h1 {
+    font-size: 30px;
+  }
+
+}
+
 
 .container {
   max-width: 400px;
@@ -161,6 +200,13 @@ async function sendPwResetEmail(email: string) {
   padding: 20px;
   text-align: center;
   background-color: transparent;
+}
+.container1 {
+  max-width: 400px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
