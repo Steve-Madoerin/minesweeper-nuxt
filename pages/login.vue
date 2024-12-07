@@ -8,6 +8,7 @@
             <div class="card-text">
               <button @click="signInWithGoogle" class="btn google-button">Sign in with Google</button>
               <button @click="showEmailPopup" class="btn google-button">Sign in with Email</button>
+              <button @click="signInWithGitHub" class="btn github-button">Sign in with GitHub</button>
               <p class="mt-4">
                 Don't have an account?
                 <router-link to="/register">Sign up</router-link>
@@ -63,7 +64,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, sendPasswordResetEmail, GithubAuthProvider } from 'firebase/auth';
 
 const email = ref('');
 const password = ref('');
@@ -80,6 +81,16 @@ async function signInWithGoogle() {
   } catch (error) {
     console.error('Google sign-in failed:', error);
     alert('Failed to sign in with Google. Please try again.');
+  }
+}
+
+async function signInWithGitHub() {
+  try {
+    await signInWithPopup(auth!, new GithubAuthProvider());
+    router.replace('/');
+  } catch (error) {
+    console.error('GitHub sign-in failed:', error);
+    alert('Failed to sign in with GitHub. Please try again.');
   }
 }
 
