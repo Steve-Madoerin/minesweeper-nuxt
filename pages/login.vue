@@ -187,7 +187,7 @@ async function sendPwResetEmail(email: string) {
 }
 
 .card-text {
-  text-align: left;
+  text-align: center;
 }
 
 .input-group {
@@ -225,11 +225,11 @@ input {
 }
 
 .google-button {
-  background-color:  #4285F4;
+  background-color:  #68a2ff;
 }
 
 .google-button:hover {
-  background-color: #c23321;
+  background-color: #2154c2;
 }
 
 .github-button {
