@@ -1,5 +1,6 @@
 <template>
   <div class="background-container">
+    <VideoAnimation />
     <div class="container">
       <div class="row justify-center align-center">
         <div class="col login d-flex justify-center align-center">
@@ -71,6 +72,7 @@
 </template>
 
 <script setup lang="ts">
+import VideoAnimation from '~/components/videoAnimationComponent/VideoAnimationComponent.vue'
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, sendPasswordResetEmail, GithubAuthProvider } from 'firebase/auth';
@@ -146,7 +148,7 @@ async function sendPwResetEmail(email: string) {
 
 <style scoped>
 .background-container {
-  background-color: aliceblue;
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -158,6 +160,7 @@ async function sendPwResetEmail(email: string) {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: transparent;
 }
 
 .row {
