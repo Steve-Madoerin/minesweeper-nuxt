@@ -46,7 +46,7 @@ const message = ref('')
 const chatLog = ref('')
 const isRegistered = ref(false)
 const router = useRouter()
-const wsRoute = ref('wss://serene-peak-10116-79a087b3a95c.herokuapp.com/chatSocket')
+const wsRoute = ref('wss://holy-nonah-steve-madoerin-fbd92927.koyeb.app/chatSocket')
 let socket: WebSocket | null = null
 
 const goBack = () => {
@@ -55,7 +55,7 @@ const goBack = () => {
 
 const register = () => {
   if (username.value) {
-    const url = `https://serene-peak-10116-79a087b3a95c.herokuapp.com/chatRegister/${encodeURIComponent(username.value)}`
+    const url = `https://holy-nonah-steve-madoerin-fbd92927.koyeb.app/chatRegister/${encodeURIComponent(username.value)}`
     fetch(url)
       .then((response) => {
         if (response.ok) {
